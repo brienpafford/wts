@@ -1,0 +1,11 @@
+{
+  "name": "wts",
+  "version": "1.0.0",
+  "description": "Home/Office/Workplace Ping Pong Score Tracker",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brien Pafford <bcpaff@gmail.com>",
+  "license": "Apache-2.0"
+}
