@@ -6,6 +6,11 @@ angular.module('wtsApp')
   .state('leaderboard', {
     url: '/leaderboard',
     templateUrl: 'client/Leaderboard/leaderboard.view.ng.html',
-    controller: 'leaderboardCtrl'
-  });
+    controller: 'leaderboardCtrl',
+    resolve: {
+    "currentUser": ["$meteor", function($meteor){
+      return $meteor.requireUser();
+	    }]
+	  }
+	});
 });

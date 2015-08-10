@@ -6,6 +6,11 @@ angular.module('wtsApp')
   .state('stats', {
     url: '/stats',
     templateUrl: 'client/stats/stats.view.ng.html',
-    controller: 'statsCtrl'
-  });
+    controller: 'statsCtrl',
+    resolve: {
+    "currentUser": ["$meteor", function($meteor){
+      return $meteor.requireUser();
+	    }]
+	  }
+	});
 });
